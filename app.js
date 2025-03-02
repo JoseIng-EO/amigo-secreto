@@ -30,3 +30,19 @@ function actualizarLista()
         listaAmigos.appendChild(item);
     }
 }
+
+function sortearAmigo()
+{
+    if(arregloAmigos.length === 0)
+    {
+        alert("El listado de amigos se encuentra vacío");
+        return;
+    }
+
+    let amigoSorteado = arregloAmigos[Math.floor(Math.Random() * arregloAmigos.length)];
+    let resultado = document.getElementById("resultado");
+    resultado.innerHTML = `Su amigo secreto es: ${resultado}`;
+
+    let limpiarLista = document.getElementById("listaAmigos");
+    limpiarLista.innerHTML = "";
+}
