@@ -39,10 +39,15 @@ function sortearAmigo()
         return;
     }
 
-    let amigoSorteado = arregloAmigos[Math.floor(Math.Random() * arregloAmigos.length)];
+    let amigoSorteado = arregloAmigos[Math.floor(Math.random() * arregloAmigos.length)];
     let resultado = document.getElementById("resultado");
-    resultado.innerHTML = `Su amigo secreto es: ${resultado}`;
+    resultado.innerHTML = `Su amigo secreto es: ${amigoSorteado}`;
 
+    limpiarListado();
+}
+
+function limpiarListado()
+{
     let limpiarLista = document.getElementById("listaAmigos");
     limpiarLista.innerHTML = "";
 }
